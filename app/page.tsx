@@ -25,17 +25,50 @@ export default function MusicFlow() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
+  const songs = [
+  {
+    id: 1,
+    title: "Blinding Lights",
+    artist: "The Weeknd",
+    cover: "https://picsum.photos/id/1015/300/300",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+  },
+  {
+    id: 2,
+    title: "Levitating",
+    artist: "Dua Lipa",
+    cover: "https://picsum.photos/id/201/300/300",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+  },
+  {
+    id: 3,
+    title: "Save Your Tears",
+    artist: "The Weeknd",
+    cover: "https://picsum.photos/id/870/300/300",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+  },
+  {
+    id: 4,
+    title: "Watermelon Sugar",
+    artist: "Harry Styles",
+    cover: "https://picsum.photos/id/1016/300/300",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+  },
+  {
+    id: 5,
+    title: "Stay",
+    artist: "The Kid LAROI & Justin Bieber",
+    cover: "https://picsum.photos/id/133/300/300",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+  },
+  {
+    id: 6,
+    title: "Heat Waves",
+    artist: "Glass Animals",
+    cover: "https://picsum.photos/id/201/300/300",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+  }
+];
   return (
     <div className="min-h-screen bg-black text-white pb-24">
       <div className="p-6">
