@@ -1,0 +1,16 @@
+{
+  "name": "musicflow",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "^0.441.0",
+    "framer-motion": "^11.0.0"
+  }
+}
